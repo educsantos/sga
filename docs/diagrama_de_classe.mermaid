@@ -1,0 +1,7 @@
+classDiagram
+
+Pessoa <|-- Professor
+Pessoa <|-- Estudante
+Professor <|-- Coordenador
+Turma "0..1" o-- "1" Professor : agregação
+Turma "0..1" *-- "1..40" Estudante : composição
