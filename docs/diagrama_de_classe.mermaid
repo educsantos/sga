@@ -8,4 +8,11 @@ Turma "0..1" *-- "1..40" Estudante : composição
 
 %% Comentário: Uma turma é considerada viável se tiver pelo menos 20 estudantes matriculados.
   %% Essa lógica será implementada no método verificarViabilidade() da classe Turma.
-  %% Gwen
+
+%% Documentos do Estudante
+IDocumento <|.. Boletim
+IDocumento <|.. Diploma
+
+%% Documentos Institucionais
+IDocumento <|.. Circular
+
