@@ -18,3 +18,14 @@ IDocumento <|.. Diploma
 IDocumento <|.. Circular
 
 
+    class Turma {
+        -nome : string
+        -professor : IProfessor*
+        -alunos : vector~IEstudante*~
+        -maxAlunos : size_t
+        +Turma(nome : string, professor : IProfessor*, maxAlunos : int)
+        +adicionarAluno(aluno : IEstudante*) : bool
+        +emitirRelatorioNotas() : void
+	+verificarViabilidade() : bool
+    }
+
