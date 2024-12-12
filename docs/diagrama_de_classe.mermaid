@@ -3,8 +3,9 @@ classDiagram
 Pessoa <|-- Professor
 Pessoa <|-- Estudante
 Professor <|-- Coordenador
-Turma "0..1" o-- "1" Professor : agregação
-Turma "0..1" *-- "1..40" Estudante : composição
+Turma "1" o-- "1..1" Professor : catedrático/adjunto
+Turma "0..1" o-- "0..1" Professor : assistente
+Turma "0..1" *-- "1..40" Estudante
 
 %% Comentário: Uma turma é considerada viável se tiver pelo menos 20 estudantes matriculados.
   %% Essa lógica será implementada no método verificarViabilidade() da classe Turma.
@@ -15,4 +16,5 @@ IDocumento <|.. Diploma
 
 %% Documentos Institucionais
 IDocumento <|.. Circular
+
 
